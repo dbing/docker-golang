@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-export GO_VERSION=1.18
+export GO_VERSION=1.21
 TAG_LATEST=yunnysunny/golang:latest
 TAG_CURRENT=yunnysunny/golang:${GO_VERSION}
 

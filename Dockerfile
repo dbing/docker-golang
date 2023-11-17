@@ -1,10 +1,10 @@
 ARG GO_VERSION
 FROM golang:${GO_VERSION}
 
-LABEL maintainer="yunnysunny@gmail.com"
+LABEL maintainer="itbraem@gmail.com"
 ENV GO111MODULE on
 ENV GOPROXY https://goproxy.cn,direct
-ENV GOPRIVATE "gitlab.com"
+ENV GOPRIVATE "gitlab.shenjumiaosuan.com"
 ENV TZ Asia/Shanghai
 
 # 安装依赖
