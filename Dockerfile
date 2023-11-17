@@ -7,9 +7,7 @@ ENV GOPROXY https://goproxy.cn,direct
 ENV GOPRIVATE "gitlab.shenjumiaosuan.com"
 ENV TZ Asia/Shanghai
 
-# 安装依赖
-RUN sed -i 's/archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list \
-  && sed -i 's/security.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list \
-  && apt-get --no-install-recommends update \
-  && apt-get install git  -y \
-  && rm -rf /var/lib/apt/lists/*
+# 安装依赖 Git
+RUN apt-get --no-install-recommends update
+RUN apt-get install git -y
+RUN rm -rf /var/lib/apt/lists/*
